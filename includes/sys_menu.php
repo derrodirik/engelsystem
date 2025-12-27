@@ -20,6 +20,7 @@ function header_render_hints()
         $hints_renderer->addHint(render_user_departure_date_hint());
         $hints_renderer->addHint(user_driver_license_required_hint());
         $hints_renderer->addHint(user_ifsg_certificate_required_hint());
+        $hints_renderer->addHint(render_user_email_verification_hint());
 
         // Important hints:
         $hints_renderer->addHint(render_user_freeloader_hint(), true);

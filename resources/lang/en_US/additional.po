@@ -268,6 +268,12 @@ msgstr "Your shift was updated"
 msgid "notification.shift.no_next_found"
 msgstr "There is no available shift."
 
+msgid "notification.registered"
+msgstr "Your new Account"
+
+msgid "notification.registered.supporter"
+msgstr "Someone created an Account for you"
+
 msgid "user.edit.success"
 msgstr "User edited successfully."
 
@@ -792,3 +798,14 @@ msgstr "/metrics buckets"
 
 msgid "config.var_dump_server"
 msgstr "var_dump server"
+
+msgid "config.enforce_email_validation"
+msgstr "Enforce E-Mail Address Validation"
+
+msgid "verify.email.message"
+msgstr ""
+"Please visit %s to validate your E-Mail Address. "
+"Without validation, you won't get any further emails from us."
+
+msgid "user_info.email_not_verified"
+msgstr "You didn't verify your email address. You won't get any email from us until you verify it."

@@ -311,6 +311,10 @@ msgstr "Registrierung erfolgreich."
 msgid "registration.successful"
 msgstr "Registrierung erfolgreich. Du kannst dich jetzt anmelden!"
 
+msgid "registration.email.verify.self"
+msgstr "Du hast ein Konto im %s erstellt"
+"Um weiterhin E-Mails vom %s zu bekommen, bestätige deine E-Mail Adresse via %s"
+
 msgid "shifts.history.delete.success"
 msgstr "Schichten erfolgreich gelöscht."
 
@@ -801,3 +805,6 @@ msgstr "/metrics buckets"
 
 msgid "config.var_dump_server"
 msgstr "var_dump Server"
+
+msgid "config.enforce_email_validation"
+msgstr "E-Mail-Adress Validierung erzwingen"

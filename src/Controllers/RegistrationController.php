@@ -48,7 +48,8 @@ class RegistrationController extends BaseController
         $rawData = $request->getParsedBody();
         $user = $this->userFactory->createFromData($rawData);
 
-        if (!$this->auth->user()) {
+        $selfSignUp = !$this->auth->user();
+        if ($selfSignUp) {
             $this->addNotification('registration.successful');
         } else {
             $this->addNotification('registration.successful.supporter');
@@ -64,6 +65,8 @@ class RegistrationController extends BaseController
             $provider = $user->oauth->first();
             return $this->redirect->to('/oauth/' . $provider->provider);
         }
+
+        event('user.created', ['user' => $user, 'selfSignUp' => $selfSignUp]);
 
         if ($this->auth->user()) {
             // User is already logged in - that means a supporter has registered an angel. Return to register page.

@@ -61,6 +61,8 @@ services:
       MYSQL_PASSWORD: engelsystem
       MYSQL_RANDOM_ROOT_PASSWORD: 1
       MYSQL_INITDB_SKIP_TZINFO: "yes"
+    ports:
+      - "127.0.0.1:3306:3306"
     volumes:
       - db:/var/lib/mysql
 volumes:

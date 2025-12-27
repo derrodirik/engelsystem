@@ -1076,6 +1076,19 @@ function render_user_arrived_hint(bool $is_sys_menu = false)
 }
 
 /**
+ * Hint for angels, which didn't verify their email address
+ * @return string|null
+ */
+function render_user_email_verification_hint()
+{
+    if (auth()->user()->verified_at === null) {
+        return __('user_info.email_not_verified');
+    }
+
+    return null;
+}
+
+/**
  * @return string|null
  */
 function render_user_goodie_hint()

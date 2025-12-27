@@ -10,6 +10,7 @@ use FastRoute\RouteCollector;
 $route->get('/', 'HomeController@index');
 $route->get('/register', 'RegistrationController@view');
 $route->post('/register', 'RegistrationController@save');
+$route->get('/verify', 'RegistrationController@verify');
 $route->get('/credits', 'CreditsController@index');
 $route->get('/health', 'HealthController@index');
 
@@ -69,6 +70,16 @@ $route->addGroup(
         $route->post('', 'PasswordResetController@postReset');
         $route->get('/{token:.+}', 'PasswordResetController@resetPassword');
         $route->post('/{token:.+}', 'PasswordResetController@postResetPassword');
+    }
+);
+
+// E-Mail Verification
+$route->addGroup(
+    '/verify/',
+    function (RouteCollector $route): void {
+        $route->get('', 'EmailVerificationController@resend');
+        $route->post('', 'EmailVerificationController@postResend');
+        $route->get('/{token:.+}', 'EmailVerificationController@verifyEmail');
     }
 );
 

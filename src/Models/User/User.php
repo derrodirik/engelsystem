@@ -36,6 +36,7 @@ use Illuminate\Support\Collection as SupportCollection;
  * @property string                             $password
  * @property string                             $api_key
  * @property Carbon|null                        $last_login_at
+ * @property Carbon|null                        $verified_at
  * @property Carbon|null                        $created_at
  * @property Carbon|null                        $updated_at
  *
@@ -99,6 +100,7 @@ class User extends BaseModel
         'email',
         'api_key',
         'last_login_at',
+        'verified_at',
     ];
 
     /** @var array<string> The attributes that should be hidden for serialization */

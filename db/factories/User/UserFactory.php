@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Database\Factories\Engelsystem\Models\User;
 
+use Engelsystem\Helpers\Carbon;
 use Engelsystem\Models\User\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -20,6 +21,7 @@ class UserFactory extends Factory
             'email'    => $this->faker->unique()->safeEmail(),
             'api_key'  => bin2hex(random_bytes(32)),
             'updated_at' => $this->faker->dateTimeInInterval('-3 months', 'now'),
+            'verified_at' => Carbon::now(),
         ];
     }
 }
